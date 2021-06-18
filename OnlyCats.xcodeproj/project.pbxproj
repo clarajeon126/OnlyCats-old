@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		85879EBF267D54E800BAF5F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85879EBE267D54E800BAF5F8 /* AppDelegate.swift */; };
 		85879EC1267D54E800BAF5F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85879EC0267D54E800BAF5F8 /* SceneDelegate.swift */; };
-		85879EC3267D54E800BAF5F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85879EC2267D54E800BAF5F8 /* ViewController.swift */; };
+		85879EC3267D54E800BAF5F8 /* CatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85879EC2267D54E800BAF5F8 /* CatViewController.swift */; };
 		85879EC6267D54E800BAF5F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85879EC4267D54E800BAF5F8 /* Main.storyboard */; };
 		85879EC8267D54EA00BAF5F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85879EC7267D54EA00BAF5F8 /* Assets.xcassets */; };
 		85879ECB267D54EA00BAF5F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85879EC9267D54EA00BAF5F8 /* LaunchScreen.storyboard */; };
+		85879ED7267D608800BAF5F8 /* MessageGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85879ED6267D608800BAF5F8 /* MessageGroupViewController.swift */; };
+		85879ED9267D60A500BAF5F8 /* MessageSendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85879ED8267D60A500BAF5F8 /* MessageSendViewController.swift */; };
+		85879EDC267D60CA00BAF5F8 /* CatDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85879EDB267D60CA00BAF5F8 /* CatDetailedViewController.swift */; };
+		85879EDE267D60DB00BAF5F8 /* PawsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85879EDD267D60DB00BAF5F8 /* PawsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		85879EBB267D54E800BAF5F8 /* OnlyCats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlyCats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85879EBE267D54E800BAF5F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85879EC0267D54E800BAF5F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		85879EC2267D54E800BAF5F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		85879EC2267D54E800BAF5F8 /* CatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatViewController.swift; sourceTree = "<group>"; };
 		85879EC5267D54E800BAF5F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		85879EC7267D54EA00BAF5F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85879ECA267D54EA00BAF5F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85879ECC267D54EA00BAF5F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85879ED6267D608800BAF5F8 /* MessageGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageGroupViewController.swift; sourceTree = "<group>"; };
+		85879ED8267D60A500BAF5F8 /* MessageSendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSendViewController.swift; sourceTree = "<group>"; };
+		85879EDB267D60CA00BAF5F8 /* CatDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailedViewController.swift; sourceTree = "<group>"; };
+		85879EDD267D60DB00BAF5F8 /* PawsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +66,41 @@
 			children = (
 				85879EBE267D54E800BAF5F8 /* AppDelegate.swift */,
 				85879EC0267D54E800BAF5F8 /* SceneDelegate.swift */,
-				85879EC2267D54E800BAF5F8 /* ViewController.swift */,
-				85879EC4267D54E800BAF5F8 /* Main.storyboard */,
+				85879ED5267D604C00BAF5F8 /* Helper */,
+				85879ED3267D602A00BAF5F8 /* View Controllers */,
+				85879ED2267D601A00BAF5F8 /* Storyboards */,
 				85879EC7267D54EA00BAF5F8 /* Assets.xcassets */,
-				85879EC9267D54EA00BAF5F8 /* LaunchScreen.storyboard */,
 				85879ECC267D54EA00BAF5F8 /* Info.plist */,
 			);
 			path = OnlyCats;
+			sourceTree = "<group>";
+		};
+		85879ED2267D601A00BAF5F8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				85879EC9267D54EA00BAF5F8 /* LaunchScreen.storyboard */,
+				85879EC4267D54E800BAF5F8 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		85879ED3267D602A00BAF5F8 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				85879EC2267D54E800BAF5F8 /* CatViewController.swift */,
+				85879ED6267D608800BAF5F8 /* MessageGroupViewController.swift */,
+				85879ED8267D60A500BAF5F8 /* MessageSendViewController.swift */,
+				85879EDB267D60CA00BAF5F8 /* CatDetailedViewController.swift */,
+				85879EDD267D60DB00BAF5F8 /* PawsViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		85879ED5267D604C00BAF5F8 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +173,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85879EC3267D54E800BAF5F8 /* ViewController.swift in Sources */,
+				85879ED7267D608800BAF5F8 /* MessageGroupViewController.swift in Sources */,
+				85879EDE267D60DB00BAF5F8 /* PawsViewController.swift in Sources */,
+				85879EDC267D60CA00BAF5F8 /* CatDetailedViewController.swift in Sources */,
+				85879EC3267D54E800BAF5F8 /* CatViewController.swift in Sources */,
 				85879EBF267D54E800BAF5F8 /* AppDelegate.swift in Sources */,
+				85879ED9267D60A500BAF5F8 /* MessageSendViewController.swift in Sources */,
 				85879EC1267D54E800BAF5F8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
