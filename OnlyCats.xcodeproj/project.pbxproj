@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,9 +17,16 @@
 		85879ED9267D60A500BAF5F8 /* MessageSendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85879ED8267D60A500BAF5F8 /* MessageSendViewController.swift */; };
 		85879EDC267D60CA00BAF5F8 /* CatDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85879EDB267D60CA00BAF5F8 /* CatDetailedViewController.swift */; };
 		85879EDE267D60DB00BAF5F8 /* PawsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85879EDD267D60DB00BAF5F8 /* PawsViewController.swift */; };
+		85879EE0267D61F300BAF5F8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85879EDF267D61F300BAF5F8 /* Extensions.swift */; };
+		85879EE2267D61FE00BAF5F8 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85879EE1267D61FE00BAF5F8 /* DatabaseManager.swift */; };
+		85879EE4267D620B00BAF5F8 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85879EE3267D620B00BAF5F8 /* AuthManager.swift */; };
+		85879EE6267D659900BAF5F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85879EE5267D659900BAF5F8 /* GoogleService-Info.plist */; };
+		BD12C0877187D46333F8338A /* Pods_OnlyCats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93020DBDF27C29E7B171388A /* Pods_OnlyCats.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15E74AF73A3D291CCD5459E1 /* Pods-OnlyCats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlyCats.release.xcconfig"; path = "Target Support Files/Pods-OnlyCats/Pods-OnlyCats.release.xcconfig"; sourceTree = "<group>"; };
+		563D33DB3F97A7DA671A0093 /* Pods-OnlyCats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlyCats.debug.xcconfig"; path = "Target Support Files/Pods-OnlyCats/Pods-OnlyCats.debug.xcconfig"; sourceTree = "<group>"; };
 		85879EBB267D54E800BAF5F8 /* OnlyCats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlyCats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85879EBE267D54E800BAF5F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85879EC0267D54E800BAF5F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +39,11 @@
 		85879ED8267D60A500BAF5F8 /* MessageSendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSendViewController.swift; sourceTree = "<group>"; };
 		85879EDB267D60CA00BAF5F8 /* CatDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailedViewController.swift; sourceTree = "<group>"; };
 		85879EDD267D60DB00BAF5F8 /* PawsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawsViewController.swift; sourceTree = "<group>"; };
+		85879EDF267D61F300BAF5F8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		85879EE1267D61FE00BAF5F8 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		85879EE3267D620B00BAF5F8 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		85879EE5267D659900BAF5F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		93020DBDF27C29E7B171388A /* Pods_OnlyCats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnlyCats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +51,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD12C0877187D46333F8338A /* Pods_OnlyCats.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		143980D9FEF60F2EA6A631E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93020DBDF27C29E7B171388A /* Pods_OnlyCats.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		408072C9A689BB16873E83C6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				563D33DB3F97A7DA671A0093 /* Pods-OnlyCats.debug.xcconfig */,
+				15E74AF73A3D291CCD5459E1 /* Pods-OnlyCats.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		85879EB2267D54E800BAF5F8 = {
 			isa = PBXGroup;
 			children = (
 				85879EBD267D54E800BAF5F8 /* OnlyCats */,
 				85879EBC267D54E800BAF5F8 /* Products */,
+				408072C9A689BB16873E83C6 /* Pods */,
+				143980D9FEF60F2EA6A631E3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +103,7 @@
 				85879ED2267D601A00BAF5F8 /* Storyboards */,
 				85879EC7267D54EA00BAF5F8 /* Assets.xcassets */,
 				85879ECC267D54EA00BAF5F8 /* Info.plist */,
+				85879EE5267D659900BAF5F8 /* GoogleService-Info.plist */,
 			);
 			path = OnlyCats;
 			sourceTree = "<group>";
@@ -99,6 +132,9 @@
 		85879ED5267D604C00BAF5F8 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				85879EDF267D61F300BAF5F8 /* Extensions.swift */,
+				85879EE1267D61FE00BAF5F8 /* DatabaseManager.swift */,
+				85879EE3267D620B00BAF5F8 /* AuthManager.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -110,9 +146,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 85879ECF267D54EA00BAF5F8 /* Build configuration list for PBXNativeTarget "OnlyCats" */;
 			buildPhases = (
+				834027EB2B71E23D7EE16641 /* [CP] Check Pods Manifest.lock */,
 				85879EB7267D54E800BAF5F8 /* Sources */,
 				85879EB8267D54E800BAF5F8 /* Frameworks */,
 				85879EB9267D54E800BAF5F8 /* Resources */,
+				6AB2B23BC1A2084C2A80185A /* [CP] Embed Pods Frameworks */,
+				79A0E85A49FA23A395826A39 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -161,12 +200,72 @@
 			buildActionMask = 2147483647;
 			files = (
 				85879ECB267D54EA00BAF5F8 /* LaunchScreen.storyboard in Resources */,
+				85879EE6267D659900BAF5F8 /* GoogleService-Info.plist in Resources */,
 				85879EC8267D54EA00BAF5F8 /* Assets.xcassets in Resources */,
 				85879EC6267D54E800BAF5F8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6AB2B23BC1A2084C2A80185A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OnlyCats/Pods-OnlyCats-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OnlyCats/Pods-OnlyCats-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OnlyCats/Pods-OnlyCats-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79A0E85A49FA23A395826A39 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OnlyCats/Pods-OnlyCats-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OnlyCats/Pods-OnlyCats-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OnlyCats/Pods-OnlyCats-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		834027EB2B71E23D7EE16641 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OnlyCats-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		85879EB7267D54E800BAF5F8 /* Sources */ = {
@@ -176,10 +275,13 @@
 				85879ED7267D608800BAF5F8 /* MessageGroupViewController.swift in Sources */,
 				85879EDE267D60DB00BAF5F8 /* PawsViewController.swift in Sources */,
 				85879EDC267D60CA00BAF5F8 /* CatDetailedViewController.swift in Sources */,
+				85879EE4267D620B00BAF5F8 /* AuthManager.swift in Sources */,
+				85879EE0267D61F300BAF5F8 /* Extensions.swift in Sources */,
 				85879EC3267D54E800BAF5F8 /* CatViewController.swift in Sources */,
 				85879EBF267D54E800BAF5F8 /* AppDelegate.swift in Sources */,
 				85879ED9267D60A500BAF5F8 /* MessageSendViewController.swift in Sources */,
 				85879EC1267D54E800BAF5F8 /* SceneDelegate.swift in Sources */,
+				85879EE2267D61FE00BAF5F8 /* DatabaseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,11 +425,13 @@
 		};
 		85879ED0267D54EA00BAF5F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 563D33DB3F97A7DA671A0093 /* Pods-OnlyCats.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T675PC557V;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = OnlyCats/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -342,11 +446,13 @@
 		};
 		85879ED1267D54EA00BAF5F8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15E74AF73A3D291CCD5459E1 /* Pods-OnlyCats.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T675PC557V;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = OnlyCats/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
