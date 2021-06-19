@@ -86,6 +86,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                     }
                 }
             }
+            else {
+                NotificationCenter.default.post(name: .returnUserSignInGoogleCompleted, object: nil)
+            }
             
             
             

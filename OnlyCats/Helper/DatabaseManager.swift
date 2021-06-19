@@ -39,6 +39,7 @@ public class DatabaseManager{
     public func changeUid(completion: @escaping ((_ success: Bool) -> ())) {
         let uid = Auth.auth().currentUser!.uid
         print("new uid from google sign in: \(uid)")
+
         userDatabase.child("googleid").observe(.value) { (snapshot) in
             if let dictionary = snapshot.value as? [String: Any] {
                 let firstName = dictionary["firstName"] as! String

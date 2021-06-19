@@ -18,18 +18,28 @@ class LoginViewController: UIViewController {
                                                    selector: #selector(userDidSignInGoogle(_:)),
                                                    name: .signInGoogleCompleted,
                                                    object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                                   selector: #selector(returnUserDidSignInGoogle(_:)),
+                                                   name: .returnUserSignInGoogleCompleted,
+                                                   object: nil)
     }
     
     @objc private func userDidSignInGoogle(_ notification: Notification) {
         // Update screen after user successfully signed in
+        print("notification read")
         DatabaseManager.shared.changeUid { success in
-            if success {
-                self.updateScreen()
-            }
+            self.updateScreen()
         }
+    }
+    @objc private func returnUserDidSignInGoogle(_ notification: Notification) {
+        // Update screen after user successfully signed in
+        print("notification read")
+        self.updateScreen()
     }
     
     private func updateScreen() {
+        print("update screen proced")
             performSegue(withIdentifier: "loginToMain", sender: self)
     }
 }

@@ -26,6 +26,7 @@
 		85879EEE267D798300BAF5F8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85879EED267D798300BAF5F8 /* LoginViewController.swift */; };
 		85879EF1267D7ED000BAF5F8 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85879EF0267D7ED000BAF5F8 /* UserProfile.swift */; };
 		85879EF3267D817D00BAF5F8 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85879EF2267D817D00BAF5F8 /* StorageManager.swift */; };
+		85879EF5267E0F8E00BAF5F8 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85879EF4267E0F8E00BAF5F8 /* Cat.swift */; };
 		BD12C0877187D46333F8338A /* Pods_OnlyCats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93020DBDF27C29E7B171388A /* Pods_OnlyCats.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		85879EED267D798300BAF5F8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		85879EF0267D7ED000BAF5F8 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		85879EF2267D817D00BAF5F8 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		85879EF4267E0F8E00BAF5F8 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 		93020DBDF27C29E7B171388A /* Pods_OnlyCats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnlyCats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				85879EF0267D7ED000BAF5F8 /* UserProfile.swift */,
+				85879EF4267E0F8E00BAF5F8 /* Cat.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 			files = (
 				85879EEE267D798300BAF5F8 /* LoginViewController.swift in Sources */,
 				85879EDE267D60DB00BAF5F8 /* PawsViewController.swift in Sources */,
+				85879EF5267E0F8E00BAF5F8 /* Cat.swift in Sources */,
 				85879EDC267D60CA00BAF5F8 /* CatDetailedViewController.swift in Sources */,
 				85879EF3267D817D00BAF5F8 /* StorageManager.swift in Sources */,
 				85879EE4267D620B00BAF5F8 /* AuthManager.swift in Sources */,
