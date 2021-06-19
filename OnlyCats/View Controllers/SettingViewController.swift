@@ -9,6 +9,11 @@ import UIKit
 
 class SettingViewController: UIViewController {
 
+    @IBAction func signoutTapped(_ sender: Any) {
+        AuthManager.shared.logOut { success in
+            
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

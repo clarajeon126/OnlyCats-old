@@ -24,6 +24,8 @@
 		85879EEA267D717000BAF5F8 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85879EE9267D717000BAF5F8 /* GlobalVariables.swift */; };
 		85879EEC267D783F00BAF5F8 /* Starting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85879EEB267D783F00BAF5F8 /* Starting.storyboard */; };
 		85879EEE267D798300BAF5F8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85879EED267D798300BAF5F8 /* LoginViewController.swift */; };
+		85879EF1267D7ED000BAF5F8 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85879EF0267D7ED000BAF5F8 /* UserProfile.swift */; };
+		85879EF3267D817D00BAF5F8 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85879EF2267D817D00BAF5F8 /* StorageManager.swift */; };
 		BD12C0877187D46333F8338A /* Pods_OnlyCats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93020DBDF27C29E7B171388A /* Pods_OnlyCats.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +51,8 @@
 		85879EE9267D717000BAF5F8 /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		85879EEB267D783F00BAF5F8 /* Starting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Starting.storyboard; sourceTree = "<group>"; };
 		85879EED267D798300BAF5F8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		85879EF0267D7ED000BAF5F8 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		85879EF2267D817D00BAF5F8 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		93020DBDF27C29E7B171388A /* Pods_OnlyCats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnlyCats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -104,6 +108,7 @@
 			children = (
 				85879EBE267D54E800BAF5F8 /* AppDelegate.swift */,
 				85879EC0267D54E800BAF5F8 /* SceneDelegate.swift */,
+				85879EEF267D7EC000BAF5F8 /* Models */,
 				85879ED5267D604C00BAF5F8 /* Helper */,
 				85879ED3267D602A00BAF5F8 /* View Controllers */,
 				85879ED2267D601A00BAF5F8 /* Storyboards */,
@@ -142,10 +147,19 @@
 			children = (
 				85879EDF267D61F300BAF5F8 /* Extensions.swift */,
 				85879EE1267D61FE00BAF5F8 /* DatabaseManager.swift */,
+				85879EF2267D817D00BAF5F8 /* StorageManager.swift */,
 				85879EE3267D620B00BAF5F8 /* AuthManager.swift */,
 				85879EE9267D717000BAF5F8 /* GlobalVariables.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		85879EEF267D7EC000BAF5F8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				85879EF0267D7ED000BAF5F8 /* UserProfile.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +299,7 @@
 				85879EEE267D798300BAF5F8 /* LoginViewController.swift in Sources */,
 				85879EDE267D60DB00BAF5F8 /* PawsViewController.swift in Sources */,
 				85879EDC267D60CA00BAF5F8 /* CatDetailedViewController.swift in Sources */,
+				85879EF3267D817D00BAF5F8 /* StorageManager.swift in Sources */,
 				85879EE4267D620B00BAF5F8 /* AuthManager.swift in Sources */,
 				85879EE0267D61F300BAF5F8 /* Extensions.swift in Sources */,
 				85879EC3267D54E800BAF5F8 /* CatViewController.swift in Sources */,
@@ -294,6 +309,7 @@
 				85879ED9267D60A500BAF5F8 /* MessageSendViewController.swift in Sources */,
 				85879EC1267D54E800BAF5F8 /* SceneDelegate.swift in Sources */,
 				85879EE2267D61FE00BAF5F8 /* DatabaseManager.swift in Sources */,
+				85879EF1267D7ED000BAF5F8 /* UserProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

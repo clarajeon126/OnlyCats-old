@@ -6,24 +6,30 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+        
+        NotificationCenter.default.addObserver(self,
+                                                   selector: #selector(userDidSignInGoogle(_:)),
+                                                   name: .signInGoogleCompleted,
+                                                   object: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc private func userDidSignInGoogle(_ notification: Notification) {
+        // Update screen after user successfully signed in
+        DatabaseManager.shared.changeUid { success in
+            if success {
+                self.updateScreen()
+            }
+        }
     }
-    */
-
+    
+    private func updateScreen() {
+            performSegue(withIdentifier: "loginToMain", sender: self)
+    }
 }

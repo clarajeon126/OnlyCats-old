@@ -26,6 +26,9 @@
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" backgroundImage="gearshape" catalog="system"/>
+                                        <connections>
+                                            <segue destination="v0R-dB-zm6" kind="presentation" modalPresentationStyle="fullScreen" id="t8L-y4-NsQ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81R-lX-mB9">
                                         <rect key="frame" x="101" y="16" width="32" height="75.5"/>
@@ -147,6 +150,9 @@
                                             <constraint firstAttribute="width" secondItem="fcH-u0-IzL" secondAttribute="height" multiplier="60:143" id="Xnh-GC-891"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="whitecatlogo"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="j18-ta-xIx"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.68627450980000004" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -159,6 +165,14 @@
                                     <constraint firstItem="fcH-u0-IzL" firstAttribute="centerX" secondItem="uL0-tc-r02" secondAttribute="centerX" constant="-90" id="xGf-sF-tYd"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHh-XU-Ni0">
+                                <rect key="frame" x="180" y="433" width="55" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="sign out"/>
+                                <connections>
+                                    <action selector="signoutTapped:" destination="v0R-dB-zm6" eventType="touchUpInside" id="zHe-yv-Z5g"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="u8s-og-WAS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
