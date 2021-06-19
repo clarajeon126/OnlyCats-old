@@ -13,6 +13,8 @@ public var cats = [Cat]()
 class CatViewController: UIViewController {
     
     @IBOutlet weak var catTableView: UITableView!
+    @IBOutlet weak var pawNumButton: UIButton!
+    @IBOutlet weak var pawsnumLabel: UILabel!
     
     var catTableCellId = "catTableCell"
     override func viewDidLoad() {
@@ -23,12 +25,16 @@ class CatViewController: UIViewController {
         
         catTableView.dataSource = self
         catTableView.delegate = self
+        
+        
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         
         handleNotAuthenticated()
+        
+        
     }
     
     //handleing not authenticated
@@ -45,6 +51,12 @@ class CatViewController: UIViewController {
             DatabaseManager.shared.observeUserProfile(Auth.auth().currentUser!.uid) { (userProfile) in
                 UserProfile.currentUserProfile = userProfile
                 
+                //set paw num button text
+                print(UserProfile.currentUserProfile?.paws)
+                self.pawsnumLabel.text = "\(UserProfile.currentUserProfile?.paws ?? 1)"
+                DatabaseManager.shared.getCats { cats in
+                    print(cats)
+                }
             }
         }
     }

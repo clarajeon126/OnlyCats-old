@@ -29,6 +29,7 @@
 		85879EF5267E0F8E00BAF5F8 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85879EF4267E0F8E00BAF5F8 /* Cat.swift */; };
 		85879EF8267E1D0400BAF5F8 /* catTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85879EF6267E1D0400BAF5F8 /* catTableViewCell.swift */; };
 		85879EF9267E1D0400BAF5F8 /* catTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85879EF7267E1D0400BAF5F8 /* catTableViewCell.xib */; };
+		85BA0177267E8DD600BE1657 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BA0176267E8DD600BE1657 /* ImageService.swift */; };
 		BD12C0877187D46333F8338A /* Pods_OnlyCats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93020DBDF27C29E7B171388A /* Pods_OnlyCats.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		85879EF6267E1D0400BAF5F8 /* catTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = catTableViewCell.swift; sourceTree = "<group>"; };
 		85879EF7267E1D0400BAF5F8 /* catTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = catTableViewCell.xib; sourceTree = "<group>"; };
 		85879EFA267E6DE400BAF5F8 /* marguerite.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = marguerite.ttf; sourceTree = "<group>"; };
+		85BA0176267E8DD600BE1657 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		93020DBDF27C29E7B171388A /* Pods_OnlyCats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnlyCats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -167,6 +169,7 @@
 			children = (
 				85879EF0267D7ED000BAF5F8 /* UserProfile.swift */,
 				85879EF4267E0F8E00BAF5F8 /* Cat.swift */,
+				85BA0176267E8DD600BE1657 /* ImageService.swift */,
 				85879EF6267E1D0400BAF5F8 /* catTableViewCell.swift */,
 				85879EF7267E1D0400BAF5F8 /* catTableViewCell.xib */,
 			);
@@ -318,6 +321,7 @@
 			files = (
 				85879EEE267D798300BAF5F8 /* LoginViewController.swift in Sources */,
 				85879EDE267D60DB00BAF5F8 /* PawsViewController.swift in Sources */,
+				85BA0177267E8DD600BE1657 /* ImageService.swift in Sources */,
 				85879EF5267E0F8E00BAF5F8 /* Cat.swift in Sources */,
 				85879EDC267D60CA00BAF5F8 /* CatDetailedViewController.swift in Sources */,
 				85879EF3267D817D00BAF5F8 /* StorageManager.swift in Sources */,

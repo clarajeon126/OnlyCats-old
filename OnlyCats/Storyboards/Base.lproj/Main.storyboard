@@ -68,10 +68,18 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="500" backgroundImage="number">
+                                <state key="normal" backgroundImage="number">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="1jm-qt-9gS" kind="presentation" id="vvB-8C-UTE"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruI-61-1qK">
+                                <rect key="frame" x="340.5" y="60.5" width="48" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -83,10 +91,12 @@
                             <constraint firstItem="dTv-p6-bFj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="AcX-Xk-964"/>
                             <constraint firstItem="gFw-eb-Vfs" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.12" id="EBa-xq-oSU"/>
                             <constraint firstItem="gFw-eb-Vfs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FnM-Dy-2hH"/>
+                            <constraint firstItem="ruI-61-1qK" firstAttribute="centerY" secondItem="dTv-p6-bFj" secondAttribute="centerY" id="I11-UH-EE9"/>
                             <constraint firstItem="77B-Kd-2lX" firstAttribute="top" secondItem="yQQ-O0-9pS" secondAttribute="bottom" constant="22" id="O9K-hg-cjY"/>
                             <constraint firstItem="yQQ-O0-9pS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Q98-3o-wJy"/>
                             <constraint firstItem="dTv-p6-bFj" firstAttribute="bottom" secondItem="yQQ-O0-9pS" secondAttribute="bottom" constant="-20" id="TNV-LZ-pdS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dTv-p6-bFj" secondAttribute="trailing" constant="10" id="YR5-Dw-dvv"/>
+                            <constraint firstItem="ruI-61-1qK" firstAttribute="centerX" secondItem="dTv-p6-bFj" secondAttribute="centerX" constant="18" id="a3b-cE-8n1"/>
                             <constraint firstItem="77B-Kd-2lX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aaF-Ls-5w2"/>
                             <constraint firstItem="77B-Kd-2lX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tqg-9B-qbS"/>
                             <constraint firstAttribute="bottom" secondItem="gFw-eb-Vfs" secondAttribute="bottom" id="wuN-RR-SeC"/>
@@ -94,6 +104,8 @@
                     </view>
                     <connections>
                         <outlet property="catTableView" destination="77B-Kd-2lX" id="eY7-xn-1ME"/>
+                        <outlet property="pawNumButton" destination="dTv-p6-bFj" id="RYT-Yh-muV"/>
+                        <outlet property="pawsnumLabel" destination="ruI-61-1qK" id="UTo-7T-oiI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -645,6 +657,9 @@
             <point key="canvasLocation" x="1418" y="133"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="vvB-8C-UTE"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowshape.turn.up.left" catalog="system" width="128" height="106"/>
         <image name="defaultpp" width="200" height="200"/>

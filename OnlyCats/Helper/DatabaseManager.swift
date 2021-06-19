@@ -79,4 +79,37 @@ public class DatabaseManager{
         })
     }
     
+    //get cats from firebase database
+    public func getCats(completion: @escaping ((_ cats: [Cat]) -> ())){
+        let catRef = database.child("cats")
+        
+        var queryCats: DatabaseQuery {
+            var catQueryRef: DatabaseQuery
+            catQueryRef = catRef.queryOrdered(byChild: "name")
+            return catQueryRef
+        }
+        
+        queryCats.observeSingleEvent(of: .value) { snapshot in
+            var cats = [Cat]()
+            var numOfChildThroughFor = 0
+            for child in snapshot.children {
+                if let childSnapshot = child as? DataSnapshot {
+                    if let data = childSnapshot.value as? [String: Any]{
+                        Cat.parse(data: data) { cat in
+                            numOfChildThroughFor += 1
+                            cats.append(cat)
+                            print(data)
+                            if numOfChildThroughFor == snapshot.childrenCount {
+                                return completion(cats)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        
+        
+    }
+    
 }
