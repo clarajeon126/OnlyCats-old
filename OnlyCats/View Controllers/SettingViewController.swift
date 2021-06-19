@@ -1,5 +1,5 @@
 //
-//  messageGroupViewController.swift
+//  SettingViewController.swift
 //  OnlyCats
 //
 //  Created by Clara Jeon on 6/18/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MessageGroupViewController: UIViewController {
+class SettingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
