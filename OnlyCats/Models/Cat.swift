@@ -30,6 +30,17 @@ public class Cat {
         self.birthdayAge = birthdayAge
     }
     
+    init(){
+        self.name = ""
+        self.description = ""
+        self.interest = ""
+        self.mainImage = #imageLiteral(resourceName: "defaultpp")
+        self.cuteCatPics = [#imageLiteral(resourceName: "defaultpp")]
+        self.feetPics = [#imageLiteral(resourceName: "defaultpp")]
+        self.cuteCatVid = URL(string: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC")!
+        self.birthdayAge = ""
+    }
+    
     static func parse(data:[String: Any], completion: @escaping (_ cat: Cat) -> ()) {
         if let name = data["name"] as? String,
            let description = data["description"] as? String,

@@ -9,10 +9,26 @@ import UIKit
 
 class CatDetailedViewController: UIViewController {
 
+    var cat = Cat()
+    @IBOutlet var offerViews: [UIView]!
+    
+    @IBOutlet weak var mainImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var birthdayAgeLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var interestLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        for x in 0..<offerViews.count {
+            offerViews[x].layer.cornerRadius = 15
+        }
+        
+        mainImageView.image = cat.mainImage
+        nameLabel.text = cat.name
+        birthdayAgeLabel.text = cat.birthdayAge
+        descriptionLabel.text = cat.description
+        interestLabel.text = "Interest: \(cat.interest)"
     }
     
 

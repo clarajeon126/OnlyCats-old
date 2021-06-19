@@ -27,4 +27,14 @@ class catTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    weak var cat: Cat?
+    func set(cat: Cat) {
+        self.cat = cat
+        
+        catImage.image = cat.mainImage
+        nameLabel.text = cat.name
+        bdayAndAgeLabel.text = cat.birthdayAge
+        descriptionLabel.text = cat.description
+        interestLabel.text = "interest: \(cat.interest)"
+    }
 }

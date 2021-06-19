@@ -98,7 +98,6 @@ public class DatabaseManager{
                         Cat.parse(data: data) { cat in
                             numOfChildThroughFor += 1
                             cats.append(cat)
-                            print(data)
                             if numOfChildThroughFor == snapshot.childrenCount {
                                 return completion(cats)
                             }

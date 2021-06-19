@@ -25,7 +25,7 @@ class CatViewController: UIViewController {
         
         catTableView.dataSource = self
         catTableView.delegate = self
-        
+        catTableView.reloadData()
         
         
     }
@@ -54,10 +54,23 @@ class CatViewController: UIViewController {
                 //set paw num button text
                 print(UserProfile.currentUserProfile?.paws)
                 self.pawsnumLabel.text = "\(UserProfile.currentUserProfile?.paws ?? 1)"
-                DatabaseManager.shared.getCats { cats in
-                    print(cats)
+                if cats.count == 0 {
+                    DatabaseManager.shared.getCats { catsinside in
+                        cats = catsinside
+                        self.catTableView.reloadData()
+                    }
                 }
             }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toCatInDetail" {
+            let indexPath = catTableView.indexPathForSelectedRow
+            let catDetailVC = segue.destination as! CatDetailedViewController
+            let catAtIndex:Cat = cats[indexPath!.row]
+            
+            catDetailVC.cat = catAtIndex
         }
     }
     
@@ -66,7 +79,7 @@ class CatViewController: UIViewController {
 
 extension CatViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return cats.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -76,10 +89,13 @@ extension CatViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: catTableCellId, for: indexPath) as! catTableViewCell
-        print("cell made")
+        cell.set(cat: cats[indexPath.row])
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toCatInDetail", sender: self)
+    }
     
 }
 
