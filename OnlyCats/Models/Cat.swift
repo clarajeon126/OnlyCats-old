@@ -16,9 +16,10 @@ public class Cat {
     var mainImage: UIImage
     var cuteCatPics: [UIImage]
     var feetPics: [UIImage]
-    var cuteCatVids: [URL]
+    var cuteCatVids: URL
+    var birthdayAge: String
     
-    init(name: String, description: String, interest: String, mainImage: UIImage, cuteCatPics: [UIImage], feetPics: [UIImage], cuteCatVids: [URL]){
+    init(name: String, description: String, interest: String, mainImage: UIImage, cuteCatPics: [UIImage], feetPics: [UIImage], cuteCatVids: URL, birthdayAge: String){
         self.name = name
         self.description = description
         self.interest = interest
@@ -26,6 +27,7 @@ public class Cat {
         self.cuteCatPics = cuteCatPics
         self.feetPics = feetPics
         self.cuteCatVids = cuteCatVids
+        self.birthdayAge = birthdayAge
     }
     
     /*static func parse(data:[String: Any], completion: @escaping (_ cat: Cat) -> ()) {

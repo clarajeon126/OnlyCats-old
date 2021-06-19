@@ -27,6 +27,8 @@
 		85879EF1267D7ED000BAF5F8 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85879EF0267D7ED000BAF5F8 /* UserProfile.swift */; };
 		85879EF3267D817D00BAF5F8 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85879EF2267D817D00BAF5F8 /* StorageManager.swift */; };
 		85879EF5267E0F8E00BAF5F8 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85879EF4267E0F8E00BAF5F8 /* Cat.swift */; };
+		85879EF8267E1D0400BAF5F8 /* catTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85879EF6267E1D0400BAF5F8 /* catTableViewCell.swift */; };
+		85879EF9267E1D0400BAF5F8 /* catTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85879EF7267E1D0400BAF5F8 /* catTableViewCell.xib */; };
 		BD12C0877187D46333F8338A /* Pods_OnlyCats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93020DBDF27C29E7B171388A /* Pods_OnlyCats.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,9 @@
 		85879EF0267D7ED000BAF5F8 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		85879EF2267D817D00BAF5F8 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		85879EF4267E0F8E00BAF5F8 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		85879EF6267E1D0400BAF5F8 /* catTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = catTableViewCell.swift; sourceTree = "<group>"; };
+		85879EF7267E1D0400BAF5F8 /* catTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = catTableViewCell.xib; sourceTree = "<group>"; };
+		85879EFA267E6DE400BAF5F8 /* marguerite.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = marguerite.ttf; sourceTree = "<group>"; };
 		93020DBDF27C29E7B171388A /* Pods_OnlyCats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnlyCats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -114,6 +119,7 @@
 				85879ED5267D604C00BAF5F8 /* Helper */,
 				85879ED3267D602A00BAF5F8 /* View Controllers */,
 				85879ED2267D601A00BAF5F8 /* Storyboards */,
+				85BA0175267E6E4D00BE1657 /* Marguerite */,
 				85879EC7267D54EA00BAF5F8 /* Assets.xcassets */,
 				85879ECC267D54EA00BAF5F8 /* Info.plist */,
 				85879EE5267D659900BAF5F8 /* GoogleService-Info.plist */,
@@ -161,8 +167,18 @@
 			children = (
 				85879EF0267D7ED000BAF5F8 /* UserProfile.swift */,
 				85879EF4267E0F8E00BAF5F8 /* Cat.swift */,
+				85879EF6267E1D0400BAF5F8 /* catTableViewCell.swift */,
+				85879EF7267E1D0400BAF5F8 /* catTableViewCell.xib */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		85BA0175267E6E4D00BE1657 /* Marguerite */ = {
+			isa = PBXGroup;
+			children = (
+				85879EFA267E6DE400BAF5F8 /* marguerite.ttf */,
+			);
+			path = Marguerite;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85879EF9267E1D0400BAF5F8 /* catTableViewCell.xib in Resources */,
 				85879ECB267D54EA00BAF5F8 /* LaunchScreen.storyboard in Resources */,
 				85879EE6267D659900BAF5F8 /* GoogleService-Info.plist in Resources */,
 				85879EEC267D783F00BAF5F8 /* Starting.storyboard in Resources */,
@@ -311,6 +328,7 @@
 				85879EEA267D717000BAF5F8 /* GlobalVariables.swift in Sources */,
 				85879EBF267D54E800BAF5F8 /* AppDelegate.swift in Sources */,
 				85879ED9267D60A500BAF5F8 /* MessageSendViewController.swift in Sources */,
+				85879EF8267E1D0400BAF5F8 /* catTableViewCell.swift in Sources */,
 				85879EC1267D54E800BAF5F8 /* SceneDelegate.swift in Sources */,
 				85879EE2267D61FE00BAF5F8 /* DatabaseManager.swift in Sources */,
 				85879EF1267D7ED000BAF5F8 /* UserProfile.swift in Sources */,

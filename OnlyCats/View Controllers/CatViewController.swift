@@ -8,11 +8,21 @@
 import UIKit
 import FirebaseAuth
 
+public var cats = [Cat]()
+
 class CatViewController: UIViewController {
     
+    @IBOutlet weak var catTableView: UITableView!
+    
+    var catTableCellId = "catTableCell"
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        catTableView.register(UINib(nibName: "catTableViewCell", bundle: nil), forCellReuseIdentifier: catTableCellId)
+        
+        catTableView.dataSource = self
+        catTableView.delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -37,6 +47,25 @@ class CatViewController: UIViewController {
                 
             }
         }
+    }
+    
+    
+}
+
+extension CatViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UIScreen.main.bounds.height * 0.55
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: catTableCellId, for: indexPath) as! catTableViewCell
+        print("cell made")
+        return cell
     }
     
     
